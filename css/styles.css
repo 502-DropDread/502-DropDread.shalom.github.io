@@ -1,0 +1,153 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f9;
+    color: #2a6674;
+}
+
+.navbar-brand img {
+    max-width: 190px;
+    height: 70px;
+}
+
+.navbar-nav .nav-link {
+    color: #2a6674;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6100;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -5px;
+    height: 2px;
+    background-color: #ff6100;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: bottom right;
+}
+
+.navbar-nav .nav-link:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.hero-section {
+    background: url('../images/portada.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* desenfoque de imagen de portada */
+
+.hero-section {
+    position: relative;
+    background: url('../images/portada.jpg') center/cover no-repeat;
+    color: white;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* negro con 60% opacidad */
+    z-index: 1;
+}
+
+.hero-section > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* fin del desenfoque de imagen de portada */
+
+
+
+.section {
+    padding: 60px 20px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.section:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.section:nth-child(even) {
+    background-color: #f1f5f9;
+}
+
+.footer {
+    background-color: #2a6674;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #ff6100;
+    border-color: #ff6100;
+}
+
+.btn-primary:hover {
+    background-color: #e65700;
+    border-color: #e65700;
+}
+
+
+/* seccion Sobre Nosotros */
+
+#sobre-nosotros {
+  background-color: #f5f9fa; /* un fondo muy suave para destacar la sección */
+  padding: 60px 20px;
+}
+
+#sobre-nosotros h2 {
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2a6674;
+}
+
+#sobre-nosotros .icon-container {
+  margin-bottom: 20px;
+}
+
+#sobre-nosotros i {
+  font-size: 50px;
+  color: #ff6100;
+  transition: color 0.3s ease;
+}
+
+#sobre-nosotros i:hover {
+  color: #2a6674;
+}
+
+#sobre-nosotros h3 {
+  font-weight: 600;
+  color: #2a6674;
+  margin-bottom: 15px;
+}
+
+#sobre-nosotros p {
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.5;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  #sobre-nosotros .col-md-5 {
+    max-width: 45%;
+  }
+}
